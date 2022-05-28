@@ -1,0 +1,46 @@
+package cart;
+/**
+ * 
+ */
+
+
+import java.util.List;
+import java.util.logging.Logger;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@CrossOrigin
+public class CartController {
+
+	protected Logger logger = Logger
+			.getLogger(CartController.class.getName());
+	
+	@Autowired
+	CartRepository cartRepository;
+	
+	@GetMapping("/cart")
+	public ResponseEntity<Cart> all() {
+		logger.info("cart-microservice all() invoked");
+		Cart cart = cartRepository.getCart();
+		logger.info("cart-microservice all() found: " + cart.getListItem().size());
+		return new ResponseEntity<Cart>(cart, HttpStatus.OK);
+	}
+	
+	@PostMapping("/cart")
+	public ResponseEntity<Cart> byId(@PathVariable("id") String id) {
+		logger.info("cart-microservice byId() invoked: " + id);
+		Cart cart = cartRepository.addCartItem(null);
+		logger.info("cart-microservice byId() found: " + + cart.getListItem().size());
+		return new ResponseEntity<Cart>(cart, HttpStatus.OK);
+	}
+}

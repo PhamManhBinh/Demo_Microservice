@@ -1,0 +1,18 @@
+package product;
+/**
+ * 
+ */
+
+
+import java.util.List;
+
+/**
+ * @author Dinesh.Rajput
+ *
+ */
+public interface ProductRepository implements CrudRepository<Product, String> {
+	
+	List<Product> getAllProducts();
+	
+	Product getProduct(String _id);
+}

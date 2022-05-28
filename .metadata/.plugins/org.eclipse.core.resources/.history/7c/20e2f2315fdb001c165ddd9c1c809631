@@ -1,0 +1,18 @@
+package cart;
+/**
+ * 
+ */
+
+
+import java.util.List;
+
+/**
+ * @author Dinesh.Rajput
+ *
+ */
+public interface CartRepository {
+	
+	Cart getCart();
+	
+	Cart addCartItem(CartItem cartItem);
+}

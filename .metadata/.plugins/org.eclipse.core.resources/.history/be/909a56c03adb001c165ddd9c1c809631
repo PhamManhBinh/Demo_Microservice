@@ -1,0 +1,22 @@
+server:
+  port: 4444
+
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods:
+            - GET
+            - POST
+      routes:
+        - id: cart-service
+          uri: http://localhost:3333/
+          predicates:
+            - Path=/cart
+        - id: product-service
+          uri: http://localhost:2222/
+          predicates:
+            - Path=/**

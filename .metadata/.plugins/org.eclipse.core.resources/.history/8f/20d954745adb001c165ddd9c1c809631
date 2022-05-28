@@ -1,0 +1,26 @@
+package cart;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class CartRepositoryImpl implements CartRepository{
+
+	@Autowired
+    MongoTemplate mongoTemplate;
+	
+	@Override
+	public Cart getCart() {
+		
+		return mongoTemplate.find(new Query(), Cart.class, "cart");
+		return null;
+	}
+
+	@Override
+	public Cart addCartItem(CartItem cartItem) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

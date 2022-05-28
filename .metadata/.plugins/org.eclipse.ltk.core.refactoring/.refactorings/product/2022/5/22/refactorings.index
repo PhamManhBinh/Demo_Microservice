@@ -1,0 +1,21 @@
+1653315719753	Copy compilation units
+1653315725797	Delete element
+1653315946372	Delete element
+1653316048461	Copy compilation units
+1653316058020	Delete elements
+1653358855261	Rename package 'account'
+1653358873166	Delete element
+1653358935459	Rename type 'Account'
+1653359163306	Rename type 'AccountRepository'
+1653359199028	Rename type 'StubAccountRepository'
+1653359428257	Rename field 'accountsByNumber'
+1653359479201	Rename local variable 'account'
+1653359675223	Rename field 'accountRepository'
+1653359704272	Rename local variable 'accounts'
+1653359742366	Rename local variable 'account'
+1653361042890	Rename type 'AccountController'
+1653361057599	Rename type 'AccountsMicroserviceServerApplication'
+1653387553164	Rename method 'getProduct'
+1653387564148	Rename method 'getAllProducts'
+1653387821297	Rename method 'getProductById'
+1653388002221	Delete element

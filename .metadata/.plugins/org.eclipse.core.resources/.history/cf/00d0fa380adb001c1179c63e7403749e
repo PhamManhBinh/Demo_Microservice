@@ -1,0 +1,43 @@
+package product;
+/**
+ * 
+ */
+
+
+import java.util.List;
+import java.util.logging.Logger;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * @author Dinesh.Rajput
+ *
+ */
+@RestController
+public class AccountController {
+
+	protected Logger logger = Logger
+			.getLogger(AccountController.class.getName());
+	
+	@Autowired
+	ProductRepository productRepository;
+	
+	@RequestMapping("/accounts")
+	public Product[] all() {
+		logger.info("accounts-microservice all() invoked");
+		List<Product> accounts = productRepository.getAllAccounts();
+		logger.info("accounts-microservice all() found: " + accounts.size());
+		return accounts.toArray(new Product[accounts.size()]);
+	}
+	
+	@RequestMapping("/accounts/{id}")
+	public Product byId(@PathVariable("id") String id) {
+		logger.info("accounts-microservice byId() invoked: " + id);
+		Product account = productRepository.getAccount(id);
+		logger.info("accounts-microservice byId() found: " + account);
+		return account;
+	}
+}

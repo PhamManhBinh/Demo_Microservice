@@ -1,0 +1,60 @@
+//package cart;
+//
+//
+//import java.util.ArrayList;
+//import java.util.HashMap;
+//import java.util.List;
+//import java.util.Map;
+//
+//import org.apache.log4j.Logger;
+//import org.springframework.stereotype.Repository;
+//
+///**
+// * @author Dinesh.Rajput
+// *
+// */
+//@Repository
+//public class StubCartRepository implements CartRepository {
+//	
+//	//private List<Product> products = new ArrayList<Product>();
+//	private Cart cart = new Cart();
+//	
+//	public StubCartRepository() {
+//		CartItem item = new CartItem("1",1);
+//		cart.addItem(item);
+////		item = new CartItem("2",2);
+////		cart.addItem(item);
+////		item = new CartItem("3",5);
+////		cart.addItem(item);
+//		Logger.getLogger(StubCartRepository.class).info("Created StubCartRepository");
+//	}
+//
+//	@Override
+//	public Cart getCart() {
+//		// TODO Auto-generated method stub
+//		return cart;
+//	}
+//
+//	@Override
+//	public Cart addCartItem(CartItem cartItem) {
+//		// TODO Auto-generated method stub
+//		cart.addItem(cartItem);
+//		return cart;
+//	}
+//	
+////	@Override
+////	public List<Product> getAllProducts() {
+////		return products;
+////	}
+////
+////	@Override
+////	public Product getProduct(String _id) {
+////		for(int i=0; i<products.size(); i++) {
+////			if(products.get(i).get_id().equals(_id)) {
+////				return products.get(i);
+////			}
+////		}
+////		return null;
+////	}
+//
+//}

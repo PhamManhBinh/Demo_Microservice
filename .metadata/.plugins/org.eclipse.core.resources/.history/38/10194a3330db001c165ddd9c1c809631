@@ -1,0 +1,32 @@
+package cart;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Cart implements Serializable{
+	private List<CartItem> listItem = new ArrayList<CartItem>();
+
+	public Cart() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Cart(List<CartItem> listItem) {
+		super();
+		this.listItem = listItem;
+	}
+	
+	public void addItem(CartItem item) {
+		for(int i=0;i<listItem.size(); i++) {
+			CartItem temp = listItem.get(i);
+			if(temp.getProductId().equals(item.getProductId())) {
+				temp.setQuantity(temp.getQuantity()+item.getQuantity());
+				listItem.set(i, temp);
+				return;
+			}
+		}
+		listItem.add(item);
+	}
+	
+}

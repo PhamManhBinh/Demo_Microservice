@@ -1,0 +1,39 @@
+/*
+ * package product;
+ * 
+ * 
+ * import java.util.ArrayList; import java.util.HashMap; import java.util.List;
+ * import java.util.Map;
+ * 
+ * import org.apache.log4j.Logger; import
+ * org.springframework.stereotype.Repository;
+ * 
+ *//**
+	 * @author Dinesh.Rajput
+	 *
+	 *//*
+		 * @Repository public class StubProductRepository implements ProductRepository {
+		 * 
+		 * private List<Product> products = new ArrayList<Product>();
+		 * 
+		 * public StubProductRepository() { Product product = new Product("1", "Phở Bò"
+		 * , 35000,
+		 * "Phở là một món ăn truyền thống của Việt Nam, có nguồn gốc từ Hà Nội và…"
+		 * ,"https://vnn-imgs-a1.vgcloud.vn/znews-photo.zadn.vn/w860/Uploaded/tmuitg/2022_01_24/83910311_145209500285551_1575068413836102905_n_1_.jpg"
+		 * ); products.add(product); product = new Product("2", "Bún Riêu" , 25000,
+		 * "Bún riêu cua là một món ăn truyền thống Việt Nam, được biết đến rộng r"
+		 * ,"https://vnn-imgs-a1.vgcloud.vn/znews-photo.zadn.vn/w860/Uploaded/tmuitg/2022_01_24/83910311_145209500285551_1575068413836102905_n_1_.jpg"
+		 * ); products.add(product); product = new Product("3", "Cơm Tấm" , 35000,
+		 * "Cơm tấm là một món ăn Việt Nam có nguyên liệu chủ yếu từ gạo tấm…"
+		 * ,"https://images.foody.vn/res/g10/98048/prof/s576x330/foody-upload-api-foody-mobile-com-190311132057.jpg"
+		 * ); products.add(product); Logger.getLogger(StubProductRepository.class).
+		 * info("Created StubProductRepository"); }
+		 * 
+		 * @Override public List<Product> findAll() { return products; }
+		 * 
+		 * @Override public Product getProductById(String _id) { for(int i=0;
+		 * i<products.size(); i++) { if(products.get(i).get_id().equals(_id)) { return
+		 * products.get(i); } } return null; }
+		 * 
+		 * }
+		 */
